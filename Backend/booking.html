@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buy cool new product</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+  </head>
+  <body>
+    <h3>Welcome to payment gateway server</h3>
+    <p>Note: This is for demo purpose only</p>
+    <section>
+   
+      <form action="createSession" method="POST">
+        <script src = "//checkout.stripe.com/v2/checkout.js" 
+  class = "stripe-button"
+  data-key = "pk_test_51OW0vdSHPlwReDFEz7lV0HRZrf2Ff6eXHon0wagnAX3DNuVjkQOGczWFMoobwYswts3sQar7Mwj7pAa0NML1QpB700EAkSZ7ZT"
+  data-amount = "7000"
+  data-currency = 'usd'
+  data-name = "Food-App"    
+  data-description = "Buy Food Plan"
+  data-locale = "auto"
+  > 
+    
+  </script>
+      </form>
+    </section>
+  </body>
+  
+</html>
+

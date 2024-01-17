@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upload your image</h1>
+    <form id="profileImageForm"  method  ="POST"   enctype="multipart/form-data">
+        <input type = "file" name = "photo"> 
+        <!-- its name should match with multers name in user router -->
+        <input type = "submit" value = "submit">
+    </form>
+</body>
+<script>
+    // Get the current email from the URL
+    const currentEmail = window.location.pathname.split('/').pop();
+  
+    // Set the dynamic action attribute for the form
+    const profileImageForm = document.getElementById('profileImageForm');
+    profileImageForm.action = `/user/ProfileImage/${currentEmail}`;
+  </script>
+</html>

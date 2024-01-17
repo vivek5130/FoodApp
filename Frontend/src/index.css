@@ -1,0 +1,353 @@
+/* Default */
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+/* a:hover {
+  color: #535bf2;
+} */
+
+body {
+  margin: 0;
+  /* background-color: rgba(241, 241, 227, 0.923); */
+  /* display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+}
+html{
+  font-size: 90.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #095d31;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    /* color: #747bff; */
+    border: 0.3px solid rgba(45, 42, 42, 0.692);
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* header */
+header {
+  background: #090808e9;
+  position: fixed;
+  top:0px;
+  z-index: 100;
+  height: 60px;
+  align-items: center;
+}
+header .container {
+  max-width: 1400px;
+  /* margin: 0 auto; */
+  /* padding: 10px 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 span{
+  color:#e7195a;
+}
+header a {
+  /* color: #fcf5e5eb; */
+  color: rgba(255, 255, 240, 0.903);
+  text-decoration: none;
+  
+}
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav button {
+  background: rgba(255, 255, 240, 0.923);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+  display: inline;
+}
+nav h1{
+  display: inline;
+  
+}
+
+header{
+  /* position: fixed; */
+  /* top:0px; */
+  margin: 0px;
+  width: 100%;
+  background-color: rgba(11, 9, 9, 0.779);
+  color: rgba(255, 255, 240, 0.899);
+  
+  /* height: 50px; */
+
+}
+/* forms */
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+/* header */
+
+
+/* profile Image */
+.profileImage{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.feature-section h1{
+  text-align: center;
+}
+.feature-section span{
+  color: #e7195a;
+}
+#carouselExampleCaptions img{
+  max-height: 100vh;
+}
+.carouserl-sentence{
+  color:#e7195a
+}
+.carousel-caption{
+  font-size: 40px;
+  font-family: "poppins";
+  font-weight: 700;
+}
+.card-container img{
+  width: 150px;
+  
+
+}
+.card-container{
+  width:30%;
+  box-shadow: #1a1a1a;
+  align-items: center;
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  padding:10px 20px;
+  margin:20px 20px;
+  /* display: inline; */
+}
+.feature-container{
+  display: flex;
+  /* align-items: center; */
+  justify-content:center;
+  
+}
+/* Contact */
+.contact .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.contact .row .image{
+  flex:1 1 35rem;
+}
+
+.contact .row .image img{
+  width:100%;
+}
+
+.contact .row form{
+  flex:1 1 50rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input, .contact .row form textarea{
+  width:40%;
+  height: 3rem;
+  margin:1rem 0;
+  padding:1rem;
+  font-size: 1.3rem;
+  color:#333;
+  background:#f7f7f7;
+  text-transform: none;
+}
+.contact .row form .btn{
+  background-color: #2ddf62;
+  color:white;
+  padding:1rem 3rem;
+  font-size: 1.3rem;
+}
+.contact .row form textarea{
+  height: 15rem;
+  resize: none;
+  width:100%;
+}
+.contact-section{
+  width:95vw;
+}
+.contact .heading span{
+  color:#2ddf62;
+  display: inline-block;
+  /* border: 1px solid green; */
+  width:50px;
+  height: 60px;
+  background-color: #11ef5432;
+  padding: 0px 7px;
+  margin:2px 3px;
+  
+}
+.heading{
+  text-align: center;
+  /* height: 30px ; */
+}
+/* FoodPlan details sections */
+.foodplan-details{
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  padding:2rem 3em;
+  width: 20%;
+
+
+}
+.foodPlans{
+  display:flex;
+  justify-content: space-evenly;
+  margin: 20px 30px;
+}
+.foodPlan-head{
+  /* display: inline-flex; */
+  /* width: 100vw; */
+  text-align: center;
+  margin: 30px;
+
+}
+.foodplan-details button{
+  margin-left: auto;
+  margin-right: auto;
+}
+.foodplan-page{
+  margin-top:70px;
+  width:80%;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.foodplan-container{
+  
+  font-size: 18px;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  padding:2rem 3em;
+  /* width: 20%; */
+
+}
+.review-section{
+  background-color: ivory;
+}
+.review-card{
+  font-size: 1.2rem;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.318);
+  margin:20px 20px;
+  padding: 20px 20px;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+.review-card span{
+  margin-left: 10px;
+}
+.review-section input{
+  width: 70%;
+}

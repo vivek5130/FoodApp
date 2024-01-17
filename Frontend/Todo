@@ -1,0 +1,6 @@
+add role section in sign up && delivery boy
+need to load reviews only on log in
+show invalid password error while login
+in backend while reset password in handler i have hashsed pass agair try removing it
+
+

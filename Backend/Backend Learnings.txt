@@ -1,0 +1,117 @@
+api
+mvc
+authentication = jwt
+--design pattern
+--error
+--express - middleware views 
+--Web security
+sql injection
+packet sniffing
+image up = multer
+email - node mailer
+paymetn - stripe
+
+server
+s/w http 
+h/w database
+
+1. efficient storage and delivery of network
+2.customised user experience
+3.controll access to content
+4. notifications
+
+IP address provides the location of the host in the network.
+
+api - it is like interface between db and interface
+rest api(Represental state transfer) - if api follows certain rulse then it is called rest api
+  rulse
+  1. response should be same irrespective of diff platform
+  2. routes should be named on nouns
+  3.http methods should be used for doing operations on routes (get , post ,patch, delete)
+  4. data should be in json format
+  5 api should be stateless. it means it doesnot store any previous data and loads all content on each request
+
+middleware
+  --sequence matters
+  app.use() ->global middleware //it runs irrespective of route
+  app.get()
+  app.post()
+  in middleware function next carry forwards req, res to next functions
+
+Mongoose hooks
+  it is used to add functionality before or after saving of data in db
+
+email validator
+  npm i email-validator
+
+Cookie
+  we can create a cookie on req object and adjust timeperiod on how mch time to store it
+  website can access cookies and provide service accordingly
+  we are using cookie parsert to set and get cookies
+
+we are adding isLoggedIn cookie while logging in the website and when ever we are accessing the get user route we check the cookie isLoggedIn and send response if it is true
+
+JWT json web token
+ -header - Encryption alogrithm
+ -payload - uniqe id / non sensitive data such as id, name
+ -signature - secretkey  + uid + alogrithm(it is available in backend)
+ to install it 
+ npm i jsonwebtoken
+
+ instead of using cookie to check login in we are going to use jwt
+
+ advantages of mvc architecture
+  -reusable,sepeartion concerns
+  -low coupling - modules are independent and change in one module have little impact on other
+  -high cohesion - interrelated functions are written in same folder
+
+Roles
+  we need to provide website in differnt way to different people like user, admin, owner, delivery boy..
+
+I was facing problem with cookies, i was able to login with ease using the cookie and able to get userProfile but when i want to getAllUser i was unable to get cookies showing undefined it happened because initially i was using localhost as origin and for getalluser i was using [::1] !!!!!!!!!
+
+Adding forget and reset password
+to send mail ->need link -> need token
+
+We can attach methods to mongoose schema
+
+
+What we have done untill now 
+in userController we added basic functionality such as getUser, getAllUser(for admin), updateUser, deleteUser
+in authController we added login, signup, isAuthorised(to check if it is admin), protectedRoute(To check if it user is logged in and acts as middleware to identify role of user[admin, user, etc] and provide personalised experienecd atleast thats what my ideology is)
+                  we added  forget password( creates a link to email to user and update and create a new token)
+                            resett pass(to enter a password and confirm pass and updates the data using a method in schema in mongoose userModel)
+                  we added logout section in which simply delete the login cookie and redirect the user to login page
+
+Now we are going to create planModel 
+we are going add review model
+struture is we want to know which user has reviewed to which plan so we need to interconnect them
+so the reviewmodel must contain userid and plan which we can get by reference supported in mongoose
+
+Adding payment gateway using stripe
+npm install --save stripe
+since we are using test account use  4242 4242 4242 4242 as acc. no.
+
+Using multer to store profileImages in servers storage
+
+There are 2 ways to save profileImages
+ ->Store binary format of image in database(it consumes lot of storages which is not optimal)
+ ->Store location(reference) of image in database and store actual(or encrypted) image in servers local storage
+to install multer
+npm i multer
+in multer we have two functionalities 
+ ->storage -where to store and by what name
+ ->filter -ensures the file format is jpeg or any valid format to be uploaded
+Now we are going to user Node mailer to send emails
+npm install nodemailer
+
+CORS (cross origin request)
+Cross-origin resource sharing (CORS) is an extension of the same-origin policy. You need it for authorized resource sharing with external third parties. For example, you need CORS when you want to pull data from external APIs that are public or authorized. 
+
+for frontend instead of react we can use vite by 
+npm create vite@latest projectName -- --template react
+
+we are using CORS package to able to send request from another origin
+
+To-Do 
+-in authcontroller in reset password after that redirect to login page
